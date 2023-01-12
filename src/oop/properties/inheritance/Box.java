@@ -13,12 +13,21 @@ public class Box {
 
 //    cube
     Box(double side){
+
+        /**
+         * Class Object is the root of the class hierarchy.
+         * Every class has Object as a superclass. All objects, including arrays,
+         * implement the methods of this class.
+         */
+
+        super();
         this.height = side;
         this.width = side;
         this.length = side;
     }
 
     Box(double length, double height, double width) {
+        System.out.println("Box class Constructor");
         this.length = length;
         this.height = height;
         this.width = width;
