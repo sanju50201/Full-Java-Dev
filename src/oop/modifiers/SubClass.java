@@ -9,6 +9,7 @@ public class SubClass extends A{
     public static void main(String[] args) {
         SubClass obj = new SubClass(21,"Sanju");
         int n = obj.num;
+        System.out.println(obj instanceof A);
 
     }
 }
