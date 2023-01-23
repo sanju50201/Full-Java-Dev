@@ -6,7 +6,9 @@ public class BankAccount {
 
     private static final Map<Integer, BankAccount> accounts = new HashMap<>();
     private final List<String> transactions = new ArrayList<>();
-     String name;
+
+
+    String name;
     private double balance;
 
     String phoneNumber;
