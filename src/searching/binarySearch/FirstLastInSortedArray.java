@@ -65,6 +65,5 @@ public class FirstLastInSortedArray {
         }
         return ans;
     }
-
 }
 
