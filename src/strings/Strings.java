@@ -5,5 +5,4 @@ public class Strings {
         String str = "Sanjith";
         System.out.println(str);
     }
-
 }
