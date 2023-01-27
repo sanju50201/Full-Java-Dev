@@ -1,1 +1,2 @@
 token = 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
+token_ubuntu = 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
