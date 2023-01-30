@@ -32,21 +32,34 @@ package practice;
 
 public class SumUnique {
     public static int sumOfUnique(int[] nums) {
-        int result = 0;
-        int[] bitVector = new int[32];
-        for(int num: nums){
-                int pos = num/32 ;
-                int offset = num % 32;
-                bitVector[pos] ^= (1 << offset);
-        }
-        for(int i = 0; i < bitVector.length; i++){
-            for(int j = 0; j < 32; j++){
-                if((bitVector[i] & (1 << j)) != 0){
-                    result += i * 32 + j;
-                }
+//        int result = 0;
+//        int[] bitVector = new int[32];
+//        for(int num: nums){
+//                int pos = num/32 ;
+//                int offset = num % 32;
+//                bitVector[pos] ^= (1 << offset);
+//        }
+//        for(int i = 0; i < bitVector.length; i++){
+//            for(int j = 0; j < 32; j++){
+//                if((bitVector[i] & (1 << j)) != 0){
+//                    result += i * 32 + j;
+//                }
+//            }
+//        }
+//        return result;
+
+        Boolean[] dup = new Boolean[101];
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (dup[nums[i]] == null) {
+                dup[nums[i]] = true;
+                sum += nums[i];
+            } else if (dup[nums[i]] == true) {
+                dup[nums[i]] = false;
+                sum -= nums[i];
             }
         }
-        return result;
+        return sum;
     }
 
     public static void main(String[] args) {
